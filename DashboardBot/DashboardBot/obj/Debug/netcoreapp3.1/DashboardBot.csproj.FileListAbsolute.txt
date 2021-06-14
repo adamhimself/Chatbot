@@ -359,3 +359,4 @@ C:\Users\marlijn.vandewardt\source\repos\Chatbot2\DashboardBot\DashboardBot\obj\
 C:\Users\marlijn.vandewardt\source\repos\Chatbot2\DashboardBot\DashboardBot\obj\Debug\netcoreapp3.1\DashboardBot.dll
 C:\Users\marlijn.vandewardt\source\repos\Chatbot2\DashboardBot\DashboardBot\obj\Debug\netcoreapp3.1\DashboardBot.pdb
 C:\Users\marlijn.vandewardt\source\repos\Chatbot2\DashboardBot\DashboardBot\obj\Debug\netcoreapp3.1\DashboardBot.genruntimeconfig.cache
+C:\Users\marlijn.vandewardt\source\repos\Chatbot2\DashboardBot\DashboardBot\bin\Debug\netcoreapp3.1\knowledge-base\source\QenA.source.en-us.qna
