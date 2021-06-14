@@ -54,8 +54,3 @@
 [Activity
     Text = Geen input begrepen
 ]
-
-# LogAction_Text_V6esD6()
-[Activity
-    Text = ${LogAction_Text_V6esD6_text()}
-]

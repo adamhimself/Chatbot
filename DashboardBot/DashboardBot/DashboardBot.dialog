@@ -192,23 +192,6 @@
           "condition": "=user.reservation"
         }
       ]
-    },
-    {
-      "$kind": "Microsoft.OnIntent",
-      "$designer": {
-        "id": "SUmvIf",
-        "name": "Welcoming"
-      },
-      "intent": "Welcoming",
-      "actions": [
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "Gvtqck"
-          },
-          "activity": ""
-        }
-      ]
     }
   ],
   "generator": "DashboardBot.lg",
@@ -219,10 +202,6 @@
       {
         "intent": "Reservations",
         "pattern": "reservations"
-      },
-      {
-        "intent": "Welcoming",
-        "pattern": "hallo"
       }
     ]
   }
