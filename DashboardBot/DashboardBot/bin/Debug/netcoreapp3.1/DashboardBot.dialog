@@ -92,7 +92,7 @@
           "choices": [
             "Mijn reserveringen",
             "Beschikbare ruimtes",
-            "Niks"
+            "Een ruimte reserveren"
           ],
           "recognizerOptions": {
             "recognizeOrdinals": true
@@ -114,15 +114,6 @@
                     "id": "DoMmO9"
                   },
                   "activity": "${SendActivity_DoMmO9()}"
-                },
-                {
-                  "$kind": "Microsoft.HttpRequest",
-                  "$designer": {
-                    "id": "xHnN80"
-                  },
-                  "resultProperty": "turn.results",
-                  "method": "GET",
-                  "responseType": "json"
                 }
               ],
               "value": "Mijn reserveringen"
@@ -140,16 +131,8 @@
               "value": "Beschikbare ruimtes"
             },
             {
-              "actions": [
-                {
-                  "$kind": "Microsoft.SendActivity",
-                  "$designer": {
-                    "id": "dmNZbv"
-                  },
-                  "activity": "${SendActivity_dmNZbv()}"
-                }
-              ],
-              "value": "Niks"
+              "actions": [],
+              "value": "Een ruimte reserveren"
             }
           ],
           "default": [
@@ -173,7 +156,15 @@
     "intents": [
       {
         "intent": "Reservations",
+        "pattern": "Reservations"
+      },
+      {
+        "intent": "Reservations",
         "pattern": "reserveren"
+      },
+      {
+        "intent": "QnA Intent recognized",
+        "pattern": "vraag"
       }
     ]
   }

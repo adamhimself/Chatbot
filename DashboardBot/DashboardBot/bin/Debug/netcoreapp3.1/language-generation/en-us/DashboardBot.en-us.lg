@@ -27,11 +27,6 @@
     Text = Dit zijn de beschikbare ruimtes op dit moment
 ]
 
-# SendActivity_dmNZbv()
-[Activity
-    Text = Niks
-]
-
 # SendActivity_sJXQBp()
 [Activity
     Text = Geen input begrepen
