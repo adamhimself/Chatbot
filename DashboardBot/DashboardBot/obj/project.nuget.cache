@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vp6IQYWSpuCNbGydvCfwJag0FyFQjdzco5UvqmgpiMvhqmCGJ79T4BMhH+taFl6aHCqg48HE7O+skwNBrjB40Q==",
+  "dgSpecHash": "tUiw45U++fH9R29kRbLrIw6lnP9buZANOa/5F9/NDxnHloxHPIPGo+5LwTGE+S3lk0pjXIVLG5WM9xCCGYXi6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marlijn.vandewardt\\source\\bots\\DashboardBot\\DashboardBot\\DashboardBot.csproj",
+  "projectFilePath": "C:\\Users\\marlijn.vandewardt\\source\\repos\\Chatbot\\DashboardBot\\DashboardBot\\DashboardBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marlijn.vandewardt\\.nuget\\packages\\adaptiveexpressions\\4.13.2\\adaptiveexpressions.4.13.2.nupkg.sha512",
     "C:\\Users\\marlijn.vandewardt\\.nuget\\packages\\antlr4.runtime.standard\\4.8.0\\antlr4.runtime.standard.4.8.0.nupkg.sha512",

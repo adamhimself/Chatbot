@@ -10846,17 +10846,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marlijn.vandewardt\\source\\bots\\DashboardBot\\DashboardBot\\DashboardBot.csproj",
+      "projectUniqueName": "C:\\Users\\marlijn.vandewardt\\source\\repos\\Chatbot\\DashboardBot\\DashboardBot\\DashboardBot.csproj",
       "projectName": "DashboardBot",
-      "projectPath": "C:\\Users\\marlijn.vandewardt\\source\\bots\\DashboardBot\\DashboardBot\\DashboardBot.csproj",
+      "projectPath": "C:\\Users\\marlijn.vandewardt\\source\\repos\\Chatbot\\DashboardBot\\DashboardBot\\DashboardBot.csproj",
       "packagesPath": "C:\\Users\\marlijn.vandewardt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marlijn.vandewardt\\source\\bots\\DashboardBot\\DashboardBot\\obj\\",
+      "outputPath": "C:\\Users\\marlijn.vandewardt\\source\\repos\\Chatbot\\DashboardBot\\DashboardBot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\marlijn.vandewardt\\source\\bots\\DashboardBot\\DashboardBot\\NuGet.Config",
+        "C:\\Users\\marlijn.vandewardt\\source\\repos\\Chatbot\\DashboardBot\\DashboardBot\\NuGet.Config",
         "C:\\Users\\marlijn.vandewardt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
