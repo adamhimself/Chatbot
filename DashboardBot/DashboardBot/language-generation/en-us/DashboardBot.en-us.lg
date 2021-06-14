@@ -25,22 +25,32 @@
     Text = Hallo ${user.Name}
 ]
 
-# ChoiceInput_Prompt_YdaPIW()
+# SendActivity_xk0B7Z()
 [Activity
-    Text = Wat wil je zien?
+    Text = Welkom bij de Reservations Chat bot.
 ]
 
-# SendActivity_FjefTo()
+# ChoiceInput_Prompt_Wzqrzf()
 [Activity
-    Text = Hier zijn jouw reserveringen: 
+    Text = Wat wilt u zien of weten?
 ]
 
-# SendActivity_o8to2v()
+# SendActivity_DoMmO9()
 [Activity
-    Text = Deze ruimtes zijn nu beschikbaar:
+    Text = Dit zijn uw reserveringen
 ]
 
-# SendActivity_0FJQyA()
+# SendActivity_SzYJj2()
 [Activity
-    Text = Geen keuze gevonden
+    Text = Dit zijn de beschikbare ruimtes op dit moment
+]
+
+# SendActivity_dmNZbv()
+[Activity
+    Text = Niks
+]
+
+# SendActivity_sJXQBp()
+[Activity
+    Text = Geen input begrepen
 ]
