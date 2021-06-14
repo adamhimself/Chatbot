@@ -5,9 +5,6 @@
     Text = ${SendActivity_Greeting_text()}
 ]
 
-# SendActivity_Greeting_text()
-- Welcome to your bot.
-
 # SendActivity_DidNotUnderstand()
 [Activity
     Text = ${SendActivity_DidNotUnderstand_text()}
@@ -15,21 +12,6 @@
 
 # SendActivity_DidNotUnderstand_text()
 - Sorry, I didn't get that.
-# TextInput_Prompt_pdFcJ5()
-[Activity
-    Text = Wat is uw naam?
-]
-
-# SendActivity_fbpPAx()
-[Activity
-    Text = Hallo ${user.Name}
-]
-
-# SendActivity_xk0B7Z()
-[Activity
-    Text = Welkom bij de Reservations Chat bot.
-]
-
 # ChoiceInput_Prompt_Wzqrzf()
 [Activity
     Text = Wat wilt u zien of weten?
@@ -54,3 +36,6 @@
 [Activity
     Text = Geen input begrepen
 ]
+# SendActivity_Greeting_text()
+- ```Hoi Hugo! Ik ben BEtty Botje, fijn dat u de weg naar Beyond Eyes heeft gevonden.
+Wat wilt u doen?```
