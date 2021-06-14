@@ -1,0 +1,46 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# TextInput_Prompt_pdFcJ5()
+[Activity
+    Text = Wat is uw naam?
+]
+
+# SendActivity_fbpPAx()
+[Activity
+    Text = Hallo ${user.Name}
+]
+
+# ChoiceInput_Prompt_YdaPIW()
+[Activity
+    Text = Wat wil je zien?
+]
+
+# SendActivity_FjefTo()
+[Activity
+    Text = Hier zijn jouw reserveringen: 
+]
+
+# SendActivity_o8to2v()
+[Activity
+    Text = Deze ruimtes zijn nu beschikbaar:
+]
+
+# SendActivity_0FJQyA()
+[Activity
+    Text = Geen keuze gevonden
+]

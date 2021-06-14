@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DashboardBot", "DashboardBot\DashboardBot.csproj", "{5C812F35-E2A4-4492-8ED8-1E51F50D5809}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C812F35-E2A4-4492-8ED8-1E51F50D5809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C812F35-E2A4-4492-8ED8-1E51F50D5809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C812F35-E2A4-4492-8ED8-1E51F50D5809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C812F35-E2A4-4492-8ED8-1E51F50D5809}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CC4F8F0-1063-45C9-A919-BE77EDF38C83}
+	EndGlobalSection
+EndGlobal
