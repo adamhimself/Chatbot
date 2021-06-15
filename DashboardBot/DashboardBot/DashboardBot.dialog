@@ -106,7 +106,7 @@
             "id": "Y99FHa"
           },
           "property": "user.bearertoken",
-          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJhNzY2NDhmMC01MjYzLTQxZjYtOWRhMC1lNzNiNzFmYjBkYjYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iZjJhNTA1ZS1jZjEyLTQyNGMtYTBkNS00NTc3NjA4ZWExMjEvIiwiaWF0IjoxNjIzNzUzMTQzLCJuYmYiOjE2MjM3NTMxNDMsImV4cCI6MTYyMzc1NzA0MywiYWNyIjoiMSIsImFpbyI6IkFTUUEyLzhUQUFBQW9VSThVcnk4MmRGeUE3aVRGUHFtMWtGT0kxdjExK29qT2xjSnZjRFlZZE09IiwiYW1yIjpbInB3ZCJdLCJhcHBpZCI6IjA1MTFmOGIyLTNiNjUtNGU3My1hMGQwLWM1ZmVkMGVjYjkwNiIsImFwcGlkYWNyIjoiMSIsImZhbWlseV9uYW1lIjoiQ2xpZW50IiwiZ2l2ZW5fbmFtZSI6IlBvc3RtYW4iLCJncm91cHMiOlsiZjYxZmI4NWItNWE4MC00Mjg5LTgwZWUtN2UyZjFiZGE3ZmIzIiwiMWI1ZWQ1MDktMjBiOC00YzE5LWE5NDUtZTgyMWZiMDQ5NWE2Il0sImlwYWRkciI6IjMxLjE2MC4zNC4xMDYiLCJuYW1lIjoiUG9zdG1hbiBDbGllbnQiLCJvaWQiOiI1ZTEzMjhmMC0wYTFhLTQ4OWUtOWIxMC0xMjM5NGRlZGFhNmYiLCJyaCI6IjAuQVNFQVhsQXF2eExQVEVLZzFVVjNZSTZoSWJMNEVRVmxPM05Pb05ERl90RHN1UVloQUZvLiIsInNjcCI6InVzZXJfaW1wZXJzb25hdGlvbiIsInN1YiI6IlQzOEcxM01rcFMzVWdPek5ZaU4wTEdwanczMU9tUVV6cmVyV200SkZUSGsiLCJ0aWQiOiJiZjJhNTA1ZS1jZjEyLTQyNGMtYTBkNS00NTc3NjA4ZWExMjEiLCJ1bmlxdWVfbmFtZSI6InBvc3RtYW5AYmVzZW5zZS5vbm1pY3Jvc29mdC5jb20iLCJ1cG4iOiJwb3N0bWFuQGJlc2Vuc2Uub25taWNyb3NvZnQuY29tIiwidXRpIjoiUXI5ZkFHM2FNMEtIYno3a2NKd1VBQSIsInZlciI6IjEuMCIsIndpZHMiOlsiYjc5ZmJmNGQtM2VmOS00Njg5LTgxNDMtNzZiMTk0ZTg1NTA5Il19.KwpuoH39xZ4mjrwxP7M9J1NfuSa6NlmpRSSh9v4_mI8xUaYy4beSVn8e9vwH8zcpBj1PZSucrplSd1ZUQpRzlYQLNNnbYs1w-qdMXsxlPOZMymbkoGq3glC_dkL0rhI53Hi1a8I1iPe2dB3GQ2MEESADMQigq1nVTKDvDZAdJjALcEAHVsN4Pkl8yu4VIzKi8NnpGInMshbK0UnczE159nYstqsrEtbjLNsbn8TdSwAUyfAfehQxHqvzKDRNrvwSMuFFf3oNrlDY1Grwfw6JkewJLPjc3eDAONcs926oyJNXKeR8Z-4BVU5Y5vKUrXoYU215xtxdeWgTDA_xVkImNw"
+          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJhNzY2NDhmMC01MjYzLTQxZjYtOWRhMC1lNzNiNzFmYjBkYjYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iZjJhNTA1ZS1jZjEyLTQyNGMtYTBkNS00NTc3NjA4ZWExMjEvIiwiaWF0IjoxNjIzNzU3NTAxLCJuYmYiOjE2MjM3NTc1MDEsImV4cCI6MTYyMzc2MTQwMSwiYWNyIjoiMSIsImFpbyI6IkUyWmdZRmhYcDZKOE5YU1RjZWdQNzRlK1hvZi84UnF6ZUFRZDNYUXJ6c0xWdHk5YU1RVUEiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMDUxMWY4YjItM2I2NS00ZTczLWEwZDAtYzVmZWQwZWNiOTA2IiwiYXBwaWRhY3IiOiIxIiwiZmFtaWx5X25hbWUiOiJDbGllbnQiLCJnaXZlbl9uYW1lIjoiUG9zdG1hbiIsImdyb3VwcyI6WyJmNjFmYjg1Yi01YTgwLTQyODktODBlZS03ZTJmMWJkYTdmYjMiLCIxYjVlZDUwOS0yMGI4LTRjMTktYTk0NS1lODIxZmIwNDk1YTYiXSwiaXBhZGRyIjoiMzEuMTYwLjM0LjEwNiIsIm5hbWUiOiJQb3N0bWFuIENsaWVudCIsIm9pZCI6IjVlMTMyOGYwLTBhMWEtNDg5ZS05YjEwLTEyMzk0ZGVkYWE2ZiIsInJoIjoiMC5BU0VBWGxBcXZ4TFBURUtnMVVWM1lJNmhJYkw0RVFWbE8zTk9vTkRGX3REc3VRWWhBRm8uIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic3ViIjoiVDM4RzEzTWtwUzNVZ096TllpTjBMR3BqdzMxT21RVXpyZXJXbTRKRlRIayIsInRpZCI6ImJmMmE1MDVlLWNmMTItNDI0Yy1hMGQ1LTQ1Nzc2MDhlYTEyMSIsInVuaXF1ZV9uYW1lIjoicG9zdG1hbkBiZXNlbnNlLm9ubWljcm9zb2Z0LmNvbSIsInVwbiI6InBvc3RtYW5AYmVzZW5zZS5vbm1pY3Jvc29mdC5jb20iLCJ1dGkiOiIwWGtoMGZsTUdFNjhzRHZPcDRNTUFBIiwidmVyIjoiMS4wIiwid2lkcyI6WyJiNzlmYmY0ZC0zZWY5LTQ2ODktODE0My03NmIxOTRlODU1MDkiXX0.cYObaO4EqoZR3wI71wvkjEQuIBOIKcZzQWA2X22S1OTaiLtRg_SLEAFqQGqe26an_Ow6zyhgNWylPysewR818V_PyT-dwoqAvzqIMnLymkSKHdrBG6b_aR9NQNiWPHz-VKYCALM1gpeIkYByyKsdN14lOyZh7Au9ZFRscP_ZyvMVdn6P6G3_JiBkcn3eUn47oNJEArXFSgcHP02DTmTMCmkl7lpusTCaxnt2r0H6BuqetxFiJdgwrqT9Tr4ZZa_ofE2YdqiGd06oFs3xVsrXjofbt4mu9jkv0v1DaxNGGY_LW7jqvSUeDmwFVa4uBSIqIfWyopmFY3bLnp_S4PsWVw"
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -249,25 +249,71 @@
                               "value": "='Desk 0-A-1: Aanlandwerkplek'"
                             }
                           ]
-                        },
-                        {
-                          "$kind": "Microsoft.SetProperty",
-                          "$designer": {
-                            "id": "abQq8f"
-                          },
-                          "property": "user.guid",
-                          "value": "='b2ee4947-15c0-4673-ab7a-df23c97a8ddb'"
                         }
                       ]
                     },
                     {
-                      "value": "Desk 0-C-3: Concentratie werkplek"
+                      "value": "Desk 0-C-3: Concentratie werkplek",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperties",
+                          "$designer": {
+                            "id": "TshZ6Y"
+                          },
+                          "assignments": [
+                            {
+                              "property": "user.guid",
+                              "value": "='4d95ea41-389c-4a68-9479-1d8d2f06d60d'"
+                            },
+                            {
+                              "property": "user.desk",
+                              "value": "='Desk 0-C-3: Concentratie werkplek'"
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "value": "Desk 0-B-4: Stilte werkplek"
+                      "value": "Desk 0-B-4: Stilte werkplek",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperties",
+                          "$designer": {
+                            "id": "gtTmsn"
+                          },
+                          "assignments": [
+                            {
+                              "property": "user.guid",
+                              "value": "='44e37be5-e656-48be-a530-5182ccf164bb'"
+                            },
+                            {
+                              "property": "user.desk",
+                              "value": "='Desk 0-B-4: Stilte werkplek'"
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "value": "Desk 0-A-3: Sta werkplek"
+                      "value": "Desk 0-A-3: Sta werkplek",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperties",
+                          "$designer": {
+                            "id": "vMfGAm"
+                          },
+                          "assignments": [
+                            {
+                              "property": "user.guid",
+                              "value": "='125b4020-b0f6-43df-a60f-4e512d232c7e'"
+                            },
+                            {
+                              "property": "user.desk",
+                              "value": "='Desk 0-A-3: Sta werkplek'"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -286,6 +332,14 @@
                   "property": "user.date"
                 },
                 {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "87JwdZ"
+                  },
+                  "property": "user.dag",
+                  "value": "=split(user.date, ' ')[0]"
+                },
+                {
                   "$kind": "Microsoft.TextInput",
                   "$designer": {
                     "id": "Nbv43T"
@@ -299,6 +353,13 @@
                   "defaultValueResponse": "",
                   "prompt": "${TextInput_Prompt_Nbv43T()}",
                   "property": "user.fromto"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "dItJ1F"
+                  },
+                  "activity": "${SendActivity_dItJ1F()}"
                 },
                 {
                   "$kind": "Microsoft.ConfirmInput",
@@ -343,15 +404,15 @@
                       "resultProperty": "dialog.reservationscreate_response",
                       "method": "POST",
                       "url": "https://becore-api-test.azurewebsites.net/venues/c70f09eb-32ea-419f-a197-847e7d0297a6/reservableitems/${user.guid}/reservations",
-                      "body": {
-                        "start": "2021-06-16T13:00:00Z",
-                        "end": "2021-06-16T16:00:00Z",
-                        "title": "DESK"
-                      },
                       "contentType": "application/json",
                       "responseType": "json",
                       "headers": {
                         "Authorization": "bearer ${user.bearertoken}"
+                      },
+                      "body": {
+                        "start": "2021-06-${user.dag}T07:00:00Z",
+                        "end": "2021-06-${user.dag}T15:00:00Z",
+                        "title": "${user.desk}"
                       }
                     },
                     {
@@ -381,13 +442,6 @@
                     }
                   ],
                   "condition": "user.confirm == true"
-                },
-                {
-                  "$kind": "Microsoft.SendActivity",
-                  "$designer": {
-                    "id": "NSAtLX"
-                  },
-                  "activity": "${SendActivity_NSAtLX()}"
                 }
               ],
               "value": "Reservering maken"
