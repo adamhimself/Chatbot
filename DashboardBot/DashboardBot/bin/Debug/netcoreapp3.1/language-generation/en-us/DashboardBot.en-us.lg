@@ -1,0 +1,36 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# ChoiceInput_Prompt_Wzqrzf()
+[Activity
+    Text = Wat wilt u zien of weten?
+]
+
+# SendActivity_DoMmO9()
+[Activity
+    Text = Dit zijn uw reserveringen
+]
+
+# SendActivity_SzYJj2()
+[Activity
+    Text = Dit zijn de beschikbare ruimtes op dit moment
+]
+
+# SendActivity_sJXQBp()
+[Activity
+    Text = Geen input begrepen
+]
+# SendActivity_Greeting_text()
+- ```Hoi Hugo! Ik ben BEtty Botje, fijn dat u de weg naar Beyond Eyes heeft gevonden.
+Wat wilt u doen?```

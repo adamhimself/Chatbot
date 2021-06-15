@@ -37,108 +37,6 @@
                     "name": "Send a response"
                   },
                   "activity": "${SendActivity_Greeting()}"
-                },
-                {
-                  "$kind": "Microsoft.TextInput",
-                  "$designer": {
-                    "id": "pdFcJ5"
-                  },
-                  "disabled": false,
-                  "maxTurnCount": 3,
-                  "alwaysPrompt": false,
-                  "allowInterruptions": false,
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "prompt": "${TextInput_Prompt_pdFcJ5()}",
-                  "property": "user.Name"
-                },
-                {
-                  "$kind": "Microsoft.SendActivity",
-                  "$designer": {
-                    "id": "fbpPAx"
-                  },
-                  "activity": "${SendActivity_fbpPAx()}"
-                },
-                {
-                  "$kind": "Microsoft.ChoiceInput",
-                  "$designer": {
-                    "id": "YdaPIW"
-                  },
-                  "defaultLocale": "en-us",
-                  "disabled": false,
-                  "maxTurnCount": 3,
-                  "alwaysPrompt": false,
-                  "allowInterruptions": false,
-                  "prompt": "${ChoiceInput_Prompt_YdaPIW()}",
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "defaultValueResponse": "",
-                  "choiceOptions": {
-                    "includeNumbers": true,
-                    "inlineOrMore": ", or ",
-                    "inlineOr": " or ",
-                    "inlineSeparator": ", "
-                  },
-                  "choices": [
-                    "Mijn reserveringen",
-                    "Alle beschikbare ruimtes",
-                    "Niks"
-                  ],
-                  "style": "inline",
-                  "property": "this.value"
-                },
-                {
-                  "$kind": "Microsoft.SwitchCondition",
-                  "$designer": {
-                    "id": "Zq4btm"
-                  },
-                  "cases": [
-                    {
-                      "actions": [
-                        {
-                          "$kind": "Microsoft.SendActivity",
-                          "$designer": {
-                            "id": "FjefTo"
-                          },
-                          "activity": "${SendActivity_FjefTo()}"
-                        }
-                      ],
-                      "value": 1
-                    },
-                    {
-                      "actions": [
-                        {
-                          "$kind": "Microsoft.SendActivity",
-                          "$designer": {
-                            "id": "o8to2v"
-                          },
-                          "activity": "${SendActivity_o8to2v()}"
-                        }
-                      ],
-                      "value": 2
-                    },
-                    {
-                      "actions": [
-                        {
-                          "$kind": "Microsoft.EndDialog",
-                          "$designer": {
-                            "id": "pK0yUn"
-                          }
-                        }
-                      ],
-                      "value": 3
-                    }
-                  ],
-                  "default": [
-                    {
-                      "$kind": "Microsoft.SendActivity",
-                      "$designer": {
-                        "id": "0FJQyA"
-                      },
-                      "activity": "${SendActivity_0FJQyA()}"
-                    }
-                  ],
-                  "condition": "=this.value"
                 }
               ]
             }
@@ -162,9 +60,112 @@
           "activity": "${SendActivity_DidNotUnderstand()}"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "gVZhhF",
+        "name": "Reservations"
+      },
+      "intent": "Reservations",
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "Wzqrzf"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_Wzqrzf()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "auto",
+          "choices": [
+            "Mijn reserveringen",
+            "Beschikbare ruimtes",
+            "Een ruimte reserveren"
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          },
+          "outputFormat": "value",
+          "property": "user.reservation"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "UxnUeu"
+          },
+          "cases": [
+            {
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "DoMmO9"
+                  },
+                  "activity": "${SendActivity_DoMmO9()}"
+                }
+              ],
+              "value": "Mijn reserveringen"
+            },
+            {
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "SzYJj2"
+                  },
+                  "activity": "${SendActivity_SzYJj2()}"
+                }
+              ],
+              "value": "Beschikbare ruimtes"
+            },
+            {
+              "actions": [],
+              "value": "Een ruimte reserveren"
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "sJXQBp"
+              },
+              "activity": "${SendActivity_sJXQBp()}"
+            }
+          ],
+          "condition": "=user.reservation"
+        }
+      ]
     }
   ],
   "generator": "DashboardBot.lg",
   "id": "DashboardBot",
-  "recognizer": "DashboardBot.lu.qna"
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "Reservations",
+        "pattern": "Reservations"
+      },
+      {
+        "intent": "Reservations",
+        "pattern": "reserveren"
+      },
+      {
+        "intent": "QnA Intent recognized",
+        "pattern": "vraag"
+      }
+    ]
+  }
 }
