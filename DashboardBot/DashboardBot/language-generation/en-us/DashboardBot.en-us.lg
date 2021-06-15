@@ -22,11 +22,6 @@
     Text = Dit zijn uw reserveringen
 ]
 
-# SendActivity_SzYJj2()
-[Activity
-    Text = Dit zijn de beschikbare ruimtes op dit moment
-]
-
 # SendActivity_dmNZbv()
 [Activity
     Text = Niks
@@ -39,3 +34,31 @@
 # SendActivity_Greeting_text()
 - ```Hoi Hugo! Ik ben BEtty Botje, fijn dat u de weg naar Beyond Eyes heeft gevonden.
 Wat wilt u doen?```
+# SendActivity_1DWoCd()
+[Activity
+    Text = Excuses, er ging iets mis met tijdens het ophalen van uw reserveringen
+]
+
+# SendActivity_yJBFOR()
+[Activity
+    Text = ${SendActivity_yJBFOR_text()}
+]
+
+# SendActivity_yJBFOR_text()
+- ```asset: ${dialog.foreach.value.title}
+van: ${dialog.foreach.value.start}
+tot: ${dialog.foreach.value.end}```
+# ChoiceInput_Prompt_zLSMxu()
+[Activity
+    Text = Dit zijn de beschikbare werkplekken op dit moment. Welke werkplek wilt u reserveren?
+]
+
+# OnIntent_Activity_gVZhhF()
+[Activity
+    Text = U heeft gekoze
+]
+
+# SendActivity_NSAtLX()
+[Activity
+    Text = U heeft gekozen voor ${user.desk}
+]
