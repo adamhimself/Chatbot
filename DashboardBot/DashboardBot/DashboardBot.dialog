@@ -31,6 +31,21 @@
               "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
               "actions": [
                 {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "srtXyx"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${TextInput_Prompt_srtXyx()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "property": "user.name"
+                },
+                {
                   "$kind": "Microsoft.SendActivity",
                   "$designer": {
                     "id": "859266",
@@ -165,6 +180,10 @@
       {
         "intent": "QnA Intent recognized",
         "pattern": "vraag"
+      },
+      {
+        "intent": "TextInput_Response_srtXyx",
+        "pattern": "adam, bill, bog, hugo"
       }
     ]
   }
