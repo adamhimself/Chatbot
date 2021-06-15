@@ -7,24 +7,17 @@
 
 # SendActivity_DidNotUnderstand()
 [Activity
-    Text = ${SendActivity_DidNotUnderstand_text()}
+    Text = Sorry, I didn't get that.
 ]
 
-# SendActivity_DidNotUnderstand_text()
-- Sorry, I didn't get that.
 # ChoiceInput_Prompt_Wzqrzf()
 [Activity
-    Text = Wat wilt u zien of weten?
+    Text = Wilt u uw reserveringen inzien of een reservering maken. 
 ]
 
 # SendActivity_DoMmO9()
 [Activity
     Text = Dit zijn uw reserveringen
-]
-
-# SendActivity_SzYJj2()
-[Activity
-    Text = Dit zijn de beschikbare ruimtes op dit moment
 ]
 
 # SendActivity_dmNZbv()
@@ -39,3 +32,61 @@
 # SendActivity_Greeting_text()
 - ```Hoi Hugo! Ik ben BEtty Botje, fijn dat u de weg naar Beyond Eyes heeft gevonden.
 Wat wilt u doen?```
+# SendActivity_1DWoCd()
+[Activity
+    Text = Excuses, er ging iets mis met tijdens het ophalen van uw reserveringen
+]
+
+# SendActivity_yJBFOR()
+[Activity
+    Text = ${SendActivity_yJBFOR_text()}
+]
+
+# SendActivity_yJBFOR_text()
+- ```asset: ${dialog.foreach.value.title}
+van: ${dialog.foreach.value.start}
+tot: ${dialog.foreach.value.end}```
+# ChoiceInput_Prompt_zLSMxu()
+[Activity
+    Text = Dit zijn de beschikbare werkplekken op dit moment. Welke werkplek wilt u reserveren?
+]
+
+# OnIntent_Activity_gVZhhF()
+[Activity
+    Text = U heeft gekoze
+]
+
+# TextInput_Prompt_f0Lkum()
+[Activity
+    Text = Op welke datum wilt u reserveren?
+]
+
+# TextInput_Prompt_Nbv43T()
+[Activity
+    Text = Wat is het tijdsbestek dat u wilt reserveren?
+]
+
+# ConfirmInput_Prompt_2VsGZF()
+[Activity
+    Text = U heeft gekozen voor ${user.desk} op ${user.date} van ${user.fromto}. Wilt u deze reservering maken?
+]
+
+# SendActivity_PIqtSY()
+[Activity
+    Text = Er is iets mis gegaan met reserveren. De werkplek is niet beschikbaar in dit tijdsbestek
+]
+
+# SendActivity_6o3TgC()
+[Activity
+    Text = U reservering is aangemaakt voor ${user.desk} op ${user.datum} van ${user.fromto}.
+]
+
+# SendActivity_Ttc2oI()
+[Activity
+    Text = https://becore-api-test.azurewebsites.net/venues/c70f09eb-32ea-419f-a197-847e7d0297a6/reservableitems/${user.guid}/reservations
+]
+
+# SendActivity_dItJ1F()
+[Activity
+    Text = de dag is ${user.dag}
+]

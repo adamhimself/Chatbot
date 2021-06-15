@@ -91,14 +91,22 @@
           "style": "auto",
           "choices": [
             "Mijn reserveringen",
-            "Beschikbare ruimtes",
-            "Niks"
+            "Reservering maken"
           ],
           "recognizerOptions": {
-            "recognizeOrdinals": true
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
           },
           "outputFormat": "value",
           "property": "user.reservation"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "Y99FHa"
+          },
+          "property": "user.bearertoken",
+          "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiJhNzY2NDhmMC01MjYzLTQxZjYtOWRhMC1lNzNiNzFmYjBkYjYiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9iZjJhNTA1ZS1jZjEyLTQyNGMtYTBkNS00NTc3NjA4ZWExMjEvIiwiaWF0IjoxNjIzNzU3NTAxLCJuYmYiOjE2MjM3NTc1MDEsImV4cCI6MTYyMzc2MTQwMSwiYWNyIjoiMSIsImFpbyI6IkUyWmdZRmhYcDZKOE5YU1RjZWdQNzRlK1hvZi84UnF6ZUFRZDNYUXJ6c0xWdHk5YU1RVUEiLCJhbXIiOlsicHdkIl0sImFwcGlkIjoiMDUxMWY4YjItM2I2NS00ZTczLWEwZDAtYzVmZWQwZWNiOTA2IiwiYXBwaWRhY3IiOiIxIiwiZmFtaWx5X25hbWUiOiJDbGllbnQiLCJnaXZlbl9uYW1lIjoiUG9zdG1hbiIsImdyb3VwcyI6WyJmNjFmYjg1Yi01YTgwLTQyODktODBlZS03ZTJmMWJkYTdmYjMiLCIxYjVlZDUwOS0yMGI4LTRjMTktYTk0NS1lODIxZmIwNDk1YTYiXSwiaXBhZGRyIjoiMzEuMTYwLjM0LjEwNiIsIm5hbWUiOiJQb3N0bWFuIENsaWVudCIsIm9pZCI6IjVlMTMyOGYwLTBhMWEtNDg5ZS05YjEwLTEyMzk0ZGVkYWE2ZiIsInJoIjoiMC5BU0VBWGxBcXZ4TFBURUtnMVVWM1lJNmhJYkw0RVFWbE8zTk9vTkRGX3REc3VRWWhBRm8uIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic3ViIjoiVDM4RzEzTWtwUzNVZ096TllpTjBMR3BqdzMxT21RVXpyZXJXbTRKRlRIayIsInRpZCI6ImJmMmE1MDVlLWNmMTItNDI0Yy1hMGQ1LTQ1Nzc2MDhlYTEyMSIsInVuaXF1ZV9uYW1lIjoicG9zdG1hbkBiZXNlbnNlLm9ubWljcm9zb2Z0LmNvbSIsInVwbiI6InBvc3RtYW5AYmVzZW5zZS5vbm1pY3Jvc29mdC5jb20iLCJ1dGkiOiIwWGtoMGZsTUdFNjhzRHZPcDRNTUFBIiwidmVyIjoiMS4wIiwid2lkcyI6WyJiNzlmYmY0ZC0zZWY5LTQ2ODktODE0My03NmIxOTRlODU1MDkiXX0.cYObaO4EqoZR3wI71wvkjEQuIBOIKcZzQWA2X22S1OTaiLtRg_SLEAFqQGqe26an_Ow6zyhgNWylPysewR818V_PyT-dwoqAvzqIMnLymkSKHdrBG6b_aR9NQNiWPHz-VKYCALM1gpeIkYByyKsdN14lOyZh7Au9ZFRscP_ZyvMVdn6P6G3_JiBkcn3eUn47oNJEArXFSgcHP02DTmTMCmkl7lpusTCaxnt2r0H6BuqetxFiJdgwrqT9Tr4ZZa_ofE2YdqiGd06oFs3xVsrXjofbt4mu9jkv0v1DaxNGGY_LW7jqvSUeDmwFVa4uBSIqIfWyopmFY3bLnp_S4PsWVw"
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -118,11 +126,52 @@
                 {
                   "$kind": "Microsoft.HttpRequest",
                   "$designer": {
-                    "id": "xHnN80"
+                    "id": "qlUyAU"
                   },
-                  "resultProperty": "turn.results",
+                  "resultProperty": "dialog.reservations_response",
                   "method": "GET",
-                  "responseType": "json"
+                  "url": "https://becore-api-test.azurewebsites.net/users/5e1328f0-0a1a-489e-9b10-12394dedaa6f/reservations?fromDate=2021-05-10T08:00:00Z&toDate=2021-06-30T08:00:00Z",
+                  "headers": {
+                    "Authorization": "bearer ${user.bearertoken}"
+                  },
+                  "responseType": "json",
+                  "contentType": "application/json"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "I4lwyq"
+                  },
+                  "condition": "dialog.reservations_response.statusCode == 200",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.Foreach",
+                      "$designer": {
+                        "id": "ITxY3l"
+                      },
+                      "index": "dialog.foreach.index",
+                      "value": "dialog.foreach.value",
+                      "itemsProperty": "dialog.reservations_response.content",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "yJBFOR"
+                          },
+                          "activity": "${SendActivity_yJBFOR()}"
+                        }
+                      ]
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "1DWoCd"
+                      },
+                      "activity": "${SendActivity_1DWoCd()}"
+                    }
+                  ]
                 }
               ],
               "value": "Mijn reserveringen"
@@ -130,26 +179,272 @@
             {
               "actions": [
                 {
-                  "$kind": "Microsoft.SendActivity",
+                  "$kind": "Microsoft.ChoiceInput",
                   "$designer": {
-                    "id": "SzYJj2"
+                    "id": "zLSMxu"
                   },
-                  "activity": "${SendActivity_SzYJj2()}"
-                }
-              ],
-              "value": "Beschikbare ruimtes"
-            },
-            {
-              "actions": [
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_zLSMxu()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "property": "user.workspaces",
+                  "outputFormat": "value",
+                  "choices": [
+                    "Desk 0-A-1: Aanlandwerkplek",
+                    "Desk 0-C-3: Concentratie werkplek",
+                    "Desk 0-B-4: Stilte werkplek",
+                    "Desk 0-A-3: Sta werkplek"
+                  ],
+                  "style": "heroCard"
+                },
+                {
+                  "$kind": "Microsoft.SetProperties",
+                  "$designer": {
+                    "id": "Oy2t4M"
+                  },
+                  "assignments": [
+                    {
+                      "property": "user.desk",
+                      "value": "='leeg'"
+                    },
+                    {
+                      "property": "user.guid",
+                      "value": "='leeg'"
+                    }
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "CslSJJ"
+                  },
+                  "condition": "=user.workspaces",
+                  "cases": [
+                    {
+                      "value": "Desk 0-A-1: Aanlandwerkplek",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperties",
+                          "$designer": {
+                            "id": "j6I1GA"
+                          },
+                          "assignments": [
+                            {
+                              "property": "user.guid",
+                              "value": "='b2ee4947-15c0-4673-ab7a-df23c97a8ddb'"
+                            },
+                            {
+                              "property": "user.desk",
+                              "value": "='Desk 0-A-1: Aanlandwerkplek'"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "Desk 0-C-3: Concentratie werkplek",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperties",
+                          "$designer": {
+                            "id": "TshZ6Y"
+                          },
+                          "assignments": [
+                            {
+                              "property": "user.guid",
+                              "value": "='4d95ea41-389c-4a68-9479-1d8d2f06d60d'"
+                            },
+                            {
+                              "property": "user.desk",
+                              "value": "='Desk 0-C-3: Concentratie werkplek'"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "Desk 0-B-4: Stilte werkplek",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperties",
+                          "$designer": {
+                            "id": "gtTmsn"
+                          },
+                          "assignments": [
+                            {
+                              "property": "user.guid",
+                              "value": "='44e37be5-e656-48be-a530-5182ccf164bb'"
+                            },
+                            {
+                              "property": "user.desk",
+                              "value": "='Desk 0-B-4: Stilte werkplek'"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "value": "Desk 0-A-3: Sta werkplek",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperties",
+                          "$designer": {
+                            "id": "vMfGAm"
+                          },
+                          "assignments": [
+                            {
+                              "property": "user.guid",
+                              "value": "='125b4020-b0f6-43df-a60f-4e512d232c7e'"
+                            },
+                            {
+                              "property": "user.desk",
+                              "value": "='Desk 0-A-3: Sta werkplek'"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "f0Lkum"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "prompt": "${TextInput_Prompt_f0Lkum()}",
+                  "property": "user.date"
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "87JwdZ"
+                  },
+                  "property": "user.dag",
+                  "value": "=split(user.date, ' ')[0]"
+                },
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "Nbv43T"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "prompt": "${TextInput_Prompt_Nbv43T()}",
+                  "property": "user.fromto"
+                },
                 {
                   "$kind": "Microsoft.SendActivity",
                   "$designer": {
-                    "id": "dmNZbv"
+                    "id": "dItJ1F"
                   },
-                  "activity": "${SendActivity_dmNZbv()}"
+                  "activity": "${SendActivity_dItJ1F()}"
+                },
+                {
+                  "$kind": "Microsoft.ConfirmInput",
+                  "$designer": {
+                    "id": "2VsGZF"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "prompt": "${ConfirmInput_Prompt_2VsGZF()}",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "property": "user.confirm"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "SbzSqm"
+                  },
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "Ttc2oI"
+                      },
+                      "activity": "${SendActivity_Ttc2oI()}"
+                    },
+                    {
+                      "$kind": "Microsoft.HttpRequest",
+                      "$designer": {
+                        "id": "UFMtUI"
+                      },
+                      "resultProperty": "dialog.reservationscreate_response",
+                      "method": "POST",
+                      "url": "https://becore-api-test.azurewebsites.net/venues/c70f09eb-32ea-419f-a197-847e7d0297a6/reservableitems/${user.guid}/reservations",
+                      "contentType": "application/json",
+                      "responseType": "json",
+                      "headers": {
+                        "Authorization": "bearer ${user.bearertoken}"
+                      },
+                      "body": {
+                        "start": "2021-06-${user.dag}T07:00:00Z",
+                        "end": "2021-06-${user.dag}T15:00:00Z",
+                        "title": "${user.desk}"
+                      }
+                    },
+                    {
+                      "$kind": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "lYhxNg"
+                      },
+                      "condition": "=dialog.reservationscreate_response.statusCode == 200",
+                      "elseActions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "PIqtSY"
+                          },
+                          "activity": "${SendActivity_PIqtSY()}"
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "6o3TgC"
+                          },
+                          "activity": "${SendActivity_6o3TgC()}"
+                        }
+                      ]
+                    }
+                  ],
+                  "condition": "user.confirm == true"
                 }
               ],
-              "value": "Niks"
+              "value": "Reservering maken"
             }
           ],
           "default": [
